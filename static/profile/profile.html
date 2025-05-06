@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный кабинет - SiteFastApi</title>
+    <link rel="stylesheet" href="/static/profile/styles.css">
+    <style>
+        .logout-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 8px 16px;
+            background-color: #f44336;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .logout-btn:hover {
+            background-color: #d32f2f;
+        }
+        .header {
+            position: relative;
+            padding-right: 120px;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>SiteFastApi</h2>
+        <ul class="sidebar-nav">
+            <li><button id="profileBtn">Личный кабинет</button></li>
+            <li><button id="eventsBtn">Мероприятия</button></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <div class="header">
+            <h1>Личный кабинет</h1>
+
+            <button id="logoutBtn" class="logout-btn">Выйти</button>
+        </div>
+
+        <div class="content-card">
+            <div class="user-info">
+                <h3>Информация о пользователе</h3>
+                <div class="info-row">
+                    <span class="info-label">Имя пользователя:</span>
+                    <span id="username" class="info-value">{{ user.username }}</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Email:</span>
+                    <span id="email" class="info-value">{{ user.email }}</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Город проживания:</span>
+                    <span id="city" class="info-value">{{ user.city }}</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Роль</span>
+                    <span id="role" class="info-value">{{ user.role }}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/profile/script.js"></script>
+</body>
+</html>

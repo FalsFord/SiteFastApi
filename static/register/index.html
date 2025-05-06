@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация</title>
+    <link rel="stylesheet" href="/static/register/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Регистрация</h1>
+        <form id="registrationForm">
+            <div class="form-group">
+                <label for="username">Имя пользователя:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="city">Город проживания:</label>
+                <input type="text" id="city" name="city" required>
+            </div>
+            <div class="form-group">
+                <label>Роль:</label>
+                <div class="radio-group">
+                    <label>
+                        <input type="radio" name="role" value="Участник" checked>
+                        Участник
+                    </label>
+                    <label>
+                        <input type="radio" name="role" value="Организатор">
+                        Организатор
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="password">Пароль:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="confirmPassword">Подтвердите пароль:</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required>
+            </div>
+            <button type="submit" class="btn">Зарегистрироваться</button>
+        </form>
+        <p class="login-link">Уже есть аккаунт? <a href="/login">Войти</a></p>
+    </div>
+
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Регистрация успешна!</h2>
+            <p>Добро пожаловать, <span id="welcomeUser"></span>!</p>
+        </div>
+    </div>
+
+    <script src="/static/register/script.js"></script>
+</body>
+</html>

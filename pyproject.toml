@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "sitefastapi"
+version = "0.1.0"
+description = ""
+authors = ["Fallsik <egor.ledovskoj.92@mail.ru>"]
+readme = "README.md"
+packages = [{ include = "sitefastapi", from = "." }]  # если есть папка `sitefastapi/`
+
+[tool.poetry.dependencies]
+python = ">=3.13"
+fastapi = "^0.115.12"
+uvicorn = "^0.34.2"
+pydantic = {extras = ["email"], version = "^2.11.4"}
+sqlalchemy = {extras = ["asyncio"], version = "^2.0.40"}
+aiosqlite = "^0.21.0"
+pydantic-settings = "^2.9.1"
+black = "^25.1.0"
+jinja2 = "^3.1.6"
+
+[build-system]
+requires = ["poetry-core>=2.0.0"]
+build-backend = "poetry.core.masonry.api"
